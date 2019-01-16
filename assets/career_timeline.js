@@ -4,6 +4,29 @@
 	const chartDiv = document.getElementById("chart");
 	const svg = d3.select(chartDiv).append("svg");
 
+	// Prep the tooltip bits, initial display is hidden
+	var tooltip = svg.append("g")
+		.style("display", "none");
+	tooltip.append("rect").attr("fill", "silver")
+		.attr('stroke', 'black')
+		.style("opacity", 0.3)
+		.attr("width", 2 * chartDiv.clientWidth / 3)
+		.attr("height", chartDiv.clientHeight / 10);
+	tooltip.append("text").attr("x", 15)
+	.attr("dy", "2.4em");
+
+	function tooltipShow() {
+		var x = 1 * chartDiv.clientWidth / 3;
+		tooltip.attr("transform", `translate(${x},0)`);
+		var text = this.dataset.tooltip;
+		tooltip.select("text").text(text);
+		tooltip.style("display", null);
+	}
+
+	function tooltipHide() {
+		tooltip.style("display", "none");
+	}
+
 	// PLOT AREA
 	const margin = {
 		top: 20,
@@ -41,7 +64,8 @@
 		// X axis
 		const xScale = d3.scaleTime()
 			.domain([xMin, xMax])
-			.range([0, innerWidth]);
+			.range([0, innerWidth])
+			.nice();
 
 		const xAxis = d3.axisBottom(xScale);
 		xAxisG.call(xAxis)
@@ -56,6 +80,7 @@
 		// Plot
 		var transition = d3.transition().duration(1000);
 		var colorScale = d3.scaleOrdinal(d3.schemeCategory10);
+		var radiusScale = d => 2 * d;
 
 		var scatter = g.selectAll('circle').data(data);
 		scatter
@@ -66,8 +91,11 @@
 			.attr('fill', d => colorScale(d.swimlane))
 			.attr('fill-opacity', 0.7)
 			.attr('r', 1)
+			.attr("data-tooltip", d => d.title + " @ " + d.company)
+			.on("mouseover", tooltipShow)
+			.on("mouseout", tooltipHide)
 			.transition(transition)
-			.attr('r', 10);
+			.attr('r', d => radiusScale(d.score));
 	};
 
 	var dataPromise = d3.tsv("/assets/data/career.tsv", row => {
@@ -79,6 +107,7 @@
 			swimlane: row["swimlane"],
 			company: row["company"],
 			title: row["title"],
+			score: row["score"],
 		};
 		return o;
 	});
