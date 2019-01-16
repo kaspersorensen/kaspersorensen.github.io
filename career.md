@@ -5,7 +5,9 @@ short_title: Career
 permalink: /career/
 ---
 
-<div id="chart" style="height: 500px">
+<div class="fullwidth">
+	<div id="chart" style="height: 350px">
+	</div>
 </div>
 
 <script src="/assets/career_timeline.js"></script>

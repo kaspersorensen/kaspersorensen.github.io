@@ -4,6 +4,23 @@
 	font-family: Arvo, monospace;
 }
 
+div.fullwidth {
+	position: relative;
+	width: 100vw;
+	margin-left: -50vw;
+	left: 50%;
+}
+
+div.timeline_tooltip {
+	position: absolute;
+	text-align: left;
+	background: #333;
+	color: white;
+	padding: 1em;
+	pointer-events: none;
+	border: 1px solid white;
+}
+
 h1,
 h2,
 h3 {
