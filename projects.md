@@ -1,10 +1,9 @@
 ---
 layout: page
-title: Projects
+title: Some of my public projects ...
+short_title: Projects
 permalink: /projects/
 ---
-
-Some of my public projects ...
 
 # DataCleaner <span class="headerlink">([website](https://datacleaner.github.io))</span>
 
