@@ -1,0 +1,12 @@
+from_date	to_date	swimlane	company	title	location
+2002-07-01	2005-06-31	School	Copenhagen Business School	BSc (HA.Dat)	Copenhagen, DK
+2006-07-01	2009-02-28	School	Copenhagen Business School	MSc (Cand.Merc.Dat)	Copenhagen, DK
+2005-07-01	2006-07-01	Teaching	Copenhagen Business School	Computer Science Instructor	Copenhagen, DK
+2005-07-01	2007-01-31	EarlyYears	SAS Institute	Software developer	Copenhagen, DK
+2007-02-01	2008-06-31	EarlyYears	SAS Institute	BI consultant	Copenhagen, DK
+2009-03-01	2010-09-30	Teaching	Lund&Bendsen	Software developer & Instructor	Copenhagen, DK
+2010-10-01	2010-12-31	DataCleaner	Human Inference	Principal Software Engineer	Arnhem, NL
+2011-01-01	2014-01-31	DataCleaner	Human Inference	Principal Tech Lead	Copenhagen, DK
+2014-02-01	2016-03-31	DataCleaner	Quadient	Product Manager	Copenhagen, DK
+2016-04-01	2017-03-31	Seattle	Quadient	Software Architect	Seattle, WA
+2017-04-01	TODAY()	Seattle	Quadient	Product Owner	Seattle, WA
