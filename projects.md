@@ -6,14 +6,13 @@ permalink: /projects/
 
 Some of my public projects ...
 
-# DataCleaner <span class="headerlink">([website](https://datacleaner.org))</span>
+# DataCleaner <span class="headerlink">([website](https://datacleaner.github.io))</span>
 
 The premier open source data quality solution. DataCleaner is a data scientists' toolkit for many if not all of the phases in data quality management. Data ingestion, wrangling, profiling, transformation, cleansing, deduplication and enrichment.
 
 <img src="/assets/dc-screenshot-200.png" /><img src="/assets/dc-logo-200.png" />
 
-I founded DataCleaner back in 2008 as part of my studies. Since partnered with [Human Inference](http://www.humaninference.com) and [Neopost EDS](http://www.neopost.com) to offer it as a commercial solution, too.
-
+I founded DataCleaner back in 2008 as part of my studies. Since then I partnered up with [Human Inference](http://www.humaninference.com) and [Quadient](http://www.quadient.com) to offer it as a commercial solution, too.
 
 <hr />
 
@@ -33,7 +32,7 @@ A plugin that allows you to use [Apache Maven](https://maven.apache.org) to orch
 
 <img src="/assets/dotnet-foundation-banner.jpg" />
 
-At [Satori Software](https://www.satorisoftware.com) we use this plugin a lot in order to orchestrate the build, test and release life cycle of our data services.
+In the [Quadient](https://www.quadient.com) Data Services teams we use this plugin a lot in order to orchestrate the build, test and release life cycle of our data services.
 
 <hr />
 
