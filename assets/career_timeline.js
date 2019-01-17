@@ -92,34 +92,67 @@
 		const transition = d3.transition().duration(1000);
 		const colorScale = d3.scaleOrdinal(d3.schemeCategory10);
 		const radiusScale = d => 1.5 * d;
+		const randomInt = n => Math.floor(Math.random() * n + 1);
+		const discreteOpacity = 0.05;
+		const rectShadowWidth = 15;
 
 		const dataJob = data.filter(d => d.type == "job");
 		const dataEvent = data.filter(d => d.type == "event");
 
-		var rectScatter = g.selectAll('rect.plotitem').data(dataJob);
-		rectScatter
-			.enter().append('rect').attr("class","plotitem")
-			.merge(rectScatter)
+		var jobScatter = g.selectAll('g.plotitem_job_group').data(dataJob);
+		var jobGroups = jobScatter
+			.enter().append('g').attr("class", "plotitem_job_group")
+			.merge(jobScatter);
+		jobGroups.selectAll("rect").remove();
+		jobGroups
+			.append("rect")
+			.attr('y', d => yScale(d.swimlane) + 1.5 * d.score - randomInt(rectShadowWidth))
+			.attr('height', d => randomInt(rectShadowWidth * 2) + 5 * d.score)
+			.attr('x', d => xScale(valueFrom(d)) - randomInt(rectShadowWidth))
+			.attr('width', d => 1)
+			.attr('fill', "black")
+			.attr('fill-opacity', discreteOpacity)
+			.attr("data-tooltip", tooltipText)
+			.on("mouseover", tooltipShow)
+			.on("mouseout", tooltipHide)
+			.transition(transition)
+			.attr('width', d => randomInt(rectShadowWidth * 2) + xScale(valueTo(d)) - xScale(valueFrom(d)));
+		jobGroups
+			.append("rect")
+			.attr("class", "plotitem")
 			.attr('y', d => yScale(d.swimlane) + 1.5 * d.score)
 			.attr('height', d => 5 * d.score)
 			.attr('x', d => xScale(valueFrom(d)))
 			.attr('width', d => 1)
 			.attr('fill', d => colorScale(d.swimlane))
 			.attr('fill-opacity', d => d.score / 10.0)
-			.attr('r', 1)
 			.attr("data-tooltip", tooltipText)
 			.on("mouseover", tooltipShow)
 			.on("mouseout", tooltipHide)
 			.transition(transition)
 			.attr('width', d => xScale(valueTo(d)) - xScale(valueFrom(d)));
 
-		var circleScatter = g.selectAll('circle.plotitem').data(dataEvent);
-		circleScatter
-			.enter().append('circle').attr("class","plotitem")
-			.merge(circleScatter)
+		var eventScatter = g.selectAll('g.plotitem_event_group').data(dataEvent);
+		var eventGroups = eventScatter
+			.enter()
+			.append('g').attr("class", "plotitem_event_group")
+			.merge(eventScatter);
+		eventGroups.selectAll("circle").remove();
+		eventGroups
+			.append("circle")
 			.attr('cy', d => d.swimlane)
 			.attr('cx', d => xScale(valueFrom(d)))
-			.attr('fill', d => "#1aab80")
+			.attr('fill', "black")
+			.attr('fill-opacity', discreteOpacity)
+			.attr('r', 1)
+			.transition(transition)
+			.attr('r', d => radiusScale(d.score) * 2);
+		eventGroups
+			.append("circle")
+			.attr("class", "plotitem")
+			.attr('cy', d => d.swimlane)
+			.attr('cx', d => xScale(valueFrom(d)))
+			.attr('fill', d => "black")
 			.attr('fill-opacity', 0.65)
 			.attr('r', 1)
 			.attr("data-tooltip", tooltipText)
