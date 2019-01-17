@@ -11,6 +11,10 @@ div.fullwidth {
 	left: 50%;
 }
 
+.plotitem:hover {
+	fill-opacity: 1;
+}
+
 div.timeline_tooltip {
 	position: absolute;
 	text-align: left;
