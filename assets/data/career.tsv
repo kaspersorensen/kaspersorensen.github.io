@@ -1,18 +1,19 @@
-type	from_date	to_date	swimlane	score	title	company	location
-job	2002-07-01	2005-06-31	School	4	BSc (HA.Dat)	Copenhagen Business School	Copenhagen, DK
-job	2006-07-01	2009-02-28	School	8	MSc (Cand.Merc.Dat)	Copenhagen Business School	Copenhagen, DK
-job	2005-07-01	2006-07-01	Teaching	5	Computer Science Instructor	Copenhagen Business School	Copenhagen, DK
-job	2005-08-01	2007-01-31	EarlyYears	5	Software developer	SAS Institute	Copenhagen, DK
-job	2007-02-01	2008-06-31	EarlyYears	3	BI consultant	SAS Institute	Copenhagen, DK
-job	2009-03-01	2010-09-30	Teaching	4	Software developer & Instructor	Lund&Bendsen	Copenhagen, DK
-job	2010-10-01	2011-10-31	DataCleaner	9	Principal Software Engineer	Human Inference	Arnhem, NL
-job	2011-11-01	2014-01-31	DataCleaner	5	Principal Tech Lead	Human Inference	Copenhagen, DK
-job	2014-02-01	2016-03-31	DataCleaner	10	Product Manager	Quadient	Copenhagen, DK
-job	2016-04-01	2017-03-31	Seattle	9	Software Architect	Quadient	Seattle, WA
-job	2017-04-01	TODAY()	Seattle	7	Product Owner	Quadient	Seattle, WA
-event	2008-04-12		200	4	DataCleaner 1.0 released	on sourceforge.net	
-event	2008-12-15		240	7	Master thesis	Commercial Open Source Software Development	@ Sun Microsystems & Ingres Software
-event	2010-11-01		170	8	DataCleaner acquired	by Human Inference	Arnhem, NL
-event	2014-11-20		40	5	Project graduation	Apache MetaModel	@ Apache Software Foundation
-event	2015-10-01		100	6	Conference Speaker	Unified data access w/ Apache MetaModel	ApacheCon 2015
-event	2018-12-01		200	8	Inventor on patent	Parsing unstructured data to provide structured information	
+type	from_date	to_date	swimlane	score	label	title	company	location
+job	2002-07-01	2005-06-31	School	4		BSc (HA.Dat)	Copenhagen Business School	Copenhagen, DK
+job	2006-07-01	2009-02-28	School	8	Copenhagen Business School	MSc (Cand.Merc.Dat)	Copenhagen Business School	Copenhagen, DK
+job	2005-07-01	2006-07-01	Teaching	5	CBS	Computer Science Instructor	Copenhagen Business School	Copenhagen, DK
+job	2005-08-01	2007-01-31	EarlyYears	5	SAS	Software developer	SAS Institute	Copenhagen, DK
+job	2007-02-01	2008-06-31	EarlyYears	4	SAS	BI consultant	SAS Institute	Copenhagen, DK
+job	2009-03-01	2010-09-30	Teaching	4	Lund&Bendsen	Software developer & Instructor	Lund&Bendsen	Copenhagen, DK
+job	2010-10-01	2011-10-31	DataCleaner	9	Human Inference	Principal Software Engineer	Human Inference	Arnhem, NL
+job	2011-11-01	2014-01-31	DataCleaner	5	Human Inference	Principal Tech Lead	Human Inference	Copenhagen, DK
+job	2014-02-01	2016-03-31	DataCleaner	10	Quadient	Product Manager	Quadient	Copenhagen, DK
+job	2016-04-01	2017-03-31	Seattle	9	Satori Software	Software Architect	Quadient	Seattle, WA
+job	2017-04-01	TODAY()	Seattle	7	Quadient	Product Owner	Quadient	Seattle, WA
+event	2008-04-12		200	4	DataCleaner 1.0 released	on sourceforge.net		
+event	2008-12-15		240	7	Master thesis	Commercial Open Source Software Development	@ Sun Microsystems & Ingres Software	
+event	2010-11-01		170	8	DataCleaner acquired	by Human Inference	Arnhem, NL	
+event	2014-11-20		40	5	Project graduation	Apache MetaModel	@ Apache Software Foundation	
+event	2015-10-01		100	6	Conference Speaker	Unified data access w/ Apache MetaModel	ApacheCon 2015	
+event	2016-04-07		190	6	Relocated to Seattle	Washington, USA			
+event	2018-12-01		200	8	Inventor on patent	Parsing unstructured data to provide structured information		

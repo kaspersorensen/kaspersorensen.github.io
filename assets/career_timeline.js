@@ -56,7 +56,8 @@
 	}
 	const valueFrom = d => d.from;
 	const valueTo = d => d.to;
-	const tooltipText = d => "<h3>" + d.title + "</h3>" + d.company + "<br>" + d.location;
+	const jobTooltipText = d => "<h3>" + d.title + "</h3>" + d.company + "<br>" + d.location;
+	const eventTooltipText = d => "<h3>" + d.label + "</h3>" + d.title + "<br>" + d.company;
 
 	const render = data => {
 		// calculate sizes based of window size and margins
@@ -106,31 +107,34 @@
 		jobGroups.selectAll("rect").remove();
 		jobGroups
 			.append("rect")
-			.attr('y', d => yScale(d.swimlane) + 1.5 * d.score - randomInt(rectShadowWidth))
-			.attr('height', d => randomInt(rectShadowWidth * 2) + 5 * d.score)
 			.attr('x', d => xScale(valueFrom(d)) - randomInt(rectShadowWidth))
+			.attr('y', d => yScale(d.swimlane) + 1.5 * d.score - randomInt(rectShadowWidth))
 			.attr('width', d => 1)
+			.attr('height', d => randomInt(rectShadowWidth * 2) + 5 * d.score)
 			.attr('fill', "black")
 			.attr('fill-opacity', discreteOpacity)
-			.attr("data-tooltip", tooltipText)
-			.on("mouseover", tooltipShow)
-			.on("mouseout", tooltipHide)
 			.transition(transition)
 			.attr('width', d => randomInt(rectShadowWidth * 2) + xScale(valueTo(d)) - xScale(valueFrom(d)));
 		jobGroups
 			.append("rect")
 			.attr("class", "plotitem")
-			.attr('y', d => yScale(d.swimlane) + 1.5 * d.score)
-			.attr('height', d => 5 * d.score)
 			.attr('x', d => xScale(valueFrom(d)))
+			.attr('y', d => yScale(d.swimlane) + 1.5 * d.score)
 			.attr('width', d => 1)
+			.attr('height', d => 5 * d.score)
 			.attr('fill', d => colorScale(d.swimlane))
 			.attr('fill-opacity', d => d.score / 10.0)
-			.attr("data-tooltip", tooltipText)
+			.attr("data-tooltip", jobTooltipText)
 			.on("mouseover", tooltipShow)
 			.on("mouseout", tooltipHide)
 			.transition(transition)
 			.attr('width', d => xScale(valueTo(d)) - xScale(valueFrom(d)));
+		jobGroups
+			.append("text")
+			.attr("fill", "white")
+			.attr('x', d => xScale(valueFrom(d)) + 3)
+			.attr('y', d => yScale(d.swimlane) + 1.5 * d.score + 12)
+			.text(d => d.label);
 
 		var eventScatter = g.selectAll('g.plotitem_event_group').data(dataEvent);
 		var eventGroups = eventScatter
@@ -155,7 +159,7 @@
 			.attr('fill', d => "black")
 			.attr('fill-opacity', 0.65)
 			.attr('r', 1)
-			.attr("data-tooltip", tooltipText)
+			.attr("data-tooltip", eventTooltipText)
 			.on("mouseover", tooltipShow)
 			.on("mouseout", tooltipHide)
 			.transition(transition)
@@ -170,6 +174,7 @@
 			from: from,
 			to: to,
 			swimlane: row["swimlane"],
+			label: row["label"],
 			company: row["company"],
 			title: row["title"],
 			score: parseInt(row["score"]),
