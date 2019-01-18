@@ -105,6 +105,7 @@
 			.enter().append('g').attr("class", "plotitem_job_group")
 			.merge(jobScatter);
 		jobGroups.selectAll("rect").remove();
+		jobGroups.selectAll("text").remove();
 		jobGroups
 			.append("rect")
 			.attr('x', d => xScale(valueFrom(d)) - randomInt(rectShadowWidth))
