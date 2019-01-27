@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Some of my public projects ...
-short_title: Projects
-permalink: /projects/
+title: Open Source projects that I founded ...
+short_title: Open Source
+permalink: /projects/opensource/
 ---
 
 # DataCleaner <span class="headerlink">([website](https://datacleaner.github.io))</span>
