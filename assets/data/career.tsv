@@ -2,8 +2,8 @@ type	from_date	to_date	swimlane	score	label	title	company	location
 job	2002-07-01	2005-06-31	School	4		BSc (HA.Dat)	Copenhagen Business School	Copenhagen, DK
 job	2006-07-01	2009-02-28	School	8	Copenhagen Business School	MSc (Cand.Merc.Dat)	Copenhagen Business School	Copenhagen, DK
 job	2005-07-01	2006-07-01	Teaching	5	CBS	Computer Science Instructor	Copenhagen Business School	Copenhagen, DK
-job	2005-08-01	2007-01-31	EarlyYears	5	SAS	Software developer	SAS Institute	Copenhagen, DK
-job	2007-02-01	2008-06-31	EarlyYears	4	SAS	BI consultant	SAS Institute	Copenhagen, DK
+job	2005-08-01	2007-01-31	Copenhagen	5	SAS	Software developer	SAS Institute	Copenhagen, DK
+job	2007-02-01	2008-06-31	Copenhagen	4	SAS	BI consultant	SAS Institute	Copenhagen, DK
 job	2009-03-01	2010-09-30	Teaching	4	Lund&Bendsen	Software developer & Instructor	Lund&Bendsen	Copenhagen, DK
 job	2010-10-01	2011-10-31	DataCleaner	9	Human Inference	Principal Software Engineer	Human Inference	Arnhem, NL
 job	2011-11-01	2014-01-31	DataCleaner	5	Human Inference	Principal Tech Lead	Human Inference	Copenhagen, DK
