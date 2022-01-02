@@ -1,6 +1,6 @@
 ---
 layout: page
-title: For fun, hobby projects and stuff ...
+title: For fun, hobby projects and stuff
 short_title: Other projects
 permalink: /projects/other
 ---

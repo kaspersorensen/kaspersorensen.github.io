@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Open Source projects that I founded ...
+title: Open Source projects
 short_title: Open Source
 permalink: /projects/opensource/
 ---

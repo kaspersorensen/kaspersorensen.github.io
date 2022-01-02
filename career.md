@@ -1,6 +1,6 @@
 ---
 layout: page
-title: My career so far ...
+title: Career overview
 short_title: Career
 permalink: /career/
 ---
