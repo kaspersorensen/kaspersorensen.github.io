@@ -81,7 +81,7 @@
     xAxisG.call(xAxis).attr('transform', "translate(0,".concat(innerHeight, ")"));
     xAxisG.selectAll('.domain').remove(); // Y axis
 
-    var yScale = d3.scaleBand().domain(["Teaching", "Copenhagen", "School", "DataCleaner", "Seattle"]) // TODO: Make dynamic
+    var yScale = d3.scaleBand().domain(["Teaching", "EarlyYears", "School", "DataCleaner", "Seattle"]) // TODO: Make dynamic
     .range([0, innerHeight]); // Plot
 
     var transition = d3.transition().duration(1000);
