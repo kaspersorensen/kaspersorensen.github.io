@@ -86,7 +86,7 @@
 
 		// Y axis
 		const yScale = d3.scaleBand()
-			.domain(["Teaching", "EarlyYears", "School", "DataCleaner", "Seattle"]) // TODO: Make dynamic
+			.domain(["Teaching", "Copenhagen", "School", "DataCleaner", "Seattle"]) // TODO: Make dynamic
 			.range([0, innerHeight]);
 
 		// Plot
