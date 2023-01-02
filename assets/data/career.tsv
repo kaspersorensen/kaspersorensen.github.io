@@ -10,8 +10,9 @@ job	2011-11-01	2014-01-31	DataCleaner	5	Human Inference	Principal Tech Lead	Huma
 job	2014-02-01	2016-03-31	DataCleaner	10	Quadient	Product Manager	Quadient	Copenhagen, DK
 job	2016-04-01	2017-03-31	Seattle	9	Satori Software	Software Architect	Quadient	Seattle, WA
 job	2017-04-01	2019-05-31	Seattle	7	Quadient	Product Owner	Quadient	Seattle, WA
-job	2019-06-01	2021-02-28()	Copenhagen	6	Zendesk	Senior Product Manager	Zendesk	Copenhagen, DK
-job	2021-03-01	TODAY()	Copenhagen	7	Zendesk	Group Product Manager	Zendesk	Copenhagen, DK
+job	2019-06-01	2021-02-28	Copenhagen	6	Zendesk	Senior Product Manager	Zendesk	Copenhagen, DK
+job	2021-03-01	2022-12-16	Copenhagen	7	Zendesk	Group Product Manager	Zendesk	Copenhagen, DK
+job	2023-01-01	TODAY()	Copenhagen	8	Tricent	Head of Product Management	Tricent	Copenhagen, DK
 event	2008-04-12		200	4	DataCleaner 1.0 released	on sourceforge.net		
 event	2008-12-15		240	7	Master thesis	Commercial Open Source Software Development	@ Sun Microsystems & Ingres Software	
 event	2010-11-01		170	8	DataCleaner acquired	by Human Inference	Arnhem, NL	
