@@ -14,14 +14,13 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Kasper Sørensen
-email: i.am.kasper.sorensen@gmail.com
+email: kaspersor@proton.me
 description: > # this means to ignore newlines until "baseurl:"
   Product builder, entrepreneur and software developer.
   Open Source advocate, father and music geek.
   Founder of several projects, including DataCleaner and Apache MetaModel.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://kaspersorensen.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: kaspersor
 github_username:  kaspersorensen
 
 # Build settings
