@@ -28,14 +28,25 @@ markdown: kramdown
 plugins:
   - jekyll-feed
 
+# Jekyll 4 uses Dart Sass, which warns about features that the legacy GitHub
+# Pages builder's Ruby Sass still requires. Silencing these known warnings
+# keeps local builds readable without changing the stylesheets.
+sass:
+  silence_deprecations:
+    - import
+    - slash-div
+    - color-functions
+    - global-builtin
+
 # Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+exclude:
+  - .bundle
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - babel.config.js
+  - node_modules
+  - package.json
+  - package-lock.json
+  - src
+  - vendor

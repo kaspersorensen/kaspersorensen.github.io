@@ -9,10 +9,10 @@
 		.attr("class", "timeline_tooltip")
 		.style("opacity", 0);
 
-	function tooltipShow() {
+	function tooltipShow(event) {
 		var text = this.dataset.tooltip;
-		var x = d3.event.pageX;
-		var y = d3.event.pageY - 28;
+		var x = event.pageX;
+		var y = event.pageY - 28;
 
 		tooltip.transition()
 			.duration(200)
@@ -21,7 +21,7 @@
 			.style("width", null)
 			.style("left", `${x+20}px`)
 			.style("top", `${y}px`);
-		if (d3.event.pageX > chartDiv.clientWidth * 2 / 3) {
+		if (event.pageX > chartDiv.clientWidth * 2 / 3) {
 			tooltip
 				.style("width", "210px")
 				.style("left", `${x-260}px`);

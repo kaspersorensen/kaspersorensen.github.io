@@ -1,6 +1,9 @@
+// Keep @import and the legacy Sass color/division functions here: GitHub Pages'
+// branch builder still compiles with Ruby Sass 3.7, which does not support the
+// Sass module system (@use / math.div).
 @charset "utf-8";
 
-@import url('https://fonts.googleapis.com/css?family=Arvo|Open+Sans');
+@import url('https://fonts.googleapis.com/css2?family=Arvo&family=Open+Sans:wght@400;600&display=swap');
 
 // Define defaults for each variable.
 
