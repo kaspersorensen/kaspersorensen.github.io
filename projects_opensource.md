@@ -11,7 +11,7 @@ The premier open source data quality solution. DataCleaner is a data scientists'
 
 <img src="/assets/dc-screenshot-200.png" /><img src="/assets/dc-logo-200.png" />
 
-I founded DataCleaner back in 2008 as part of my studies. Since then I partnered up with [Human Inference](http://www.humaninference.com) and [Quadient](http://www.quadient.com) to offer it as a commercial solution, too.
+I founded DataCleaner back in 2008 as part of my studies. Since then I partnered up with [Human Inference](https://www.humaninference.com) and [Quadient](https://www.quadient.com) to offer it as a commercial solution, too.
 
 <hr />
 
